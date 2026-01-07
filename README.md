@@ -1,36 +1,158 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📝 Notes App  
+### Modern Full-Stack Notes Application using Next.js & MongoDB
 
-## Getting Started
+A clean, modern, and fully functional **Notes application** built with **Next.js (App Router)** and **MongoDB**, featuring **CRUD operations**, **dark/light mode**, **search**, **pin notes**, and a **polished UI**.
 
-First, run the development server:
+This project is designed to be **interview-ready** and demonstrates **real-world full-stack development practices**.
 
+---
+
+## 🚀 Features
+
+- ✏️ Create, edit, and delete notes  
+- 📄 View all notes in a responsive grid  
+- 🔍 Search notes by title or content  
+- ⭐ Pin / unpin important notes  
+- 🌙 Dark / Light mode toggle  
+- 💾 Theme persistence using localStorage  
+- 🕒 Created date display  
+- ⚠️ Delete confirmation dialog  
+- ⏳ Loading and empty states  
+- 🎨 Modern UI with Tailwind CSS  
+
+---
+
+## 🧠 Tech Stack
+
+### Frontend
+- Next.js (App Router)
+- React (Client Components)
+- Tailwind CSS (v4)
+
+### Backend
+- Next.js API Routes
+- MongoDB
+- Mongoose
+
+### Other Tools
+- Context API (Theme Management)
+- LocalStorage (Theme persistence)
+
+---
+
+## 📂 Project Structure
+
+app/
+├── api/
+│ └── notes/
+│ ├── route.js
+│ └── [id]/route.js
+│
+├── components/
+│ └── ThemeProvider.js
+│
+├── create/
+│ └── page.js
+│
+├── edit/
+│ └── [id]/page.js
+│
+├── layout.js
+├── page.js
+├── globals.css
+│
+lib/
+└── mongodb.js
+│
+models/
+└── Note.js
+
+yaml
+Copy code
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the Repository
 ```bash
+git clone https://github.com/your-username/notes-app.git
+cd notes-app
+2️⃣ Install Dependencies
+bash
+Copy code
+npm install
+3️⃣ Environment Variables
+Create a .env.local file in the root directory:
+
+env
+Copy code
+MONGODB_URI=your_mongodb_connection_string
+Make sure MongoDB Atlas network access is enabled.
+
+4️⃣ Run the App
+bash
+Copy code
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open http://localhost:3000 in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🔌 API Endpoints
+➕ Create Note
+POST /api/notes
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+json
+Copy code
+{
+  "title": "My Note",
+  "content": "Some content here"
+}
+📄 Get All Notes
+GET /api/notes
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+✏️ Update Note
+PUT /api/notes/:id
 
-## Learn More
+json
+Copy code
+{
+  "title": "Updated title",
+  "content": "Updated content",
+  "isPinned": true
+}
+❌ Delete Note
+DELETE /api/notes/:id
 
-To learn more about Next.js, take a look at the following resources:
+🌙 Dark / Light Mode
+Implemented using Context API
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Theme applied at layout level
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Controlled using .dark class on <html>
 
-## Deploy on Vercel
+Persisted with localStorage
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Tailwind CSS v4 enabled using:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+css
+Copy code
+@custom-variant dark (&:where(.dark, .dark *));
+🎯 Key Learnings
+Next.js App Router architecture
+
+Full-stack CRUD using API routes
+
+MongoDB integration with Mongoose
+
+Theme management using Context API
+
+Tailwind CSS v4 theming
+
+UX improvements with confirmations and loading states
+
+👨‍💻 Author
+Love Kumar
+MCA Graduate | Full-Stack Developer
+
+🔗 LinkedIn:
+https://www.linkedin.com/in/love-kumar-327299212/
+
