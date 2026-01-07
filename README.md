@@ -40,35 +40,35 @@ This project is designed to be **interview-ready** and demonstrates **real-world
 
 ---
 
-## 📂 Project Structure
+    ## 📂 Project Structure
 
-app/
-├── api/
-│ └── notes/
-│ ├── route.js
-│ └── [id]/route.js
-│
-├── components/
-│ └── ThemeProvider.js
-│
-├── create/
-│ └── page.js
-│
-├── edit/
-│ └── [id]/page.js
-│
-├── layout.js
-├── page.js
-├── globals.css
-│
-lib/
-└── mongodb.js
-│
-models/
-└── Note.js
+    app/
+    ├── api/
+    │ └── notes/
+    │ ├── route.js
+    │ └── [id]/route.js
+    │
+    ├── components/
+    │ └── ThemeProvider.js
+    │
+    ├── create/
+    │ └── page.js
+    │
+    ├── edit/
+    │ └── [id]/page.js
+    │
+    ├── layout.js
+    ├── page.js
+    ├── globals.css
+    │
+    lib/
+    └── mongodb.js
+    │
+    models/
+    └── Note.js
 
-yaml
-Copy code
+    yaml
+    Copy code
 
 ---
 
@@ -78,63 +78,62 @@ Copy code
 ```bash
 git clone https://github.com/your-username/notes-app.git
 cd notes-app
-2️⃣ Install Dependencies
-bash
-Copy code
+### 2️⃣ Install Dependencies
+```bash
 npm install
-3️⃣ Environment Variables
+###3️⃣ Environment Variables
 Create a .env.local file in the root directory:
 
-env
-Copy code
+### env
+```bash
 MONGODB_URI=your_mongodb_connection_string
 Make sure MongoDB Atlas network access is enabled.
 
-4️⃣ Run the App
-bash
+### 4️⃣ Run the App
+```bash
 Copy code
 npm run dev
 Open http://localhost:3000 in your browser.
 
-🔌 API Endpoints
-➕ Create Note
-POST /api/notes
+### 🔌 API Endpoints
+###➕ Create Note
+### POST /api/notes
 
-json
-Copy code
+### json
+```bash
 {
   "title": "My Note",
   "content": "Some content here"
 }
-📄 Get All Notes
+###📄 Get All Notes
 GET /api/notes
 
-✏️ Update Note
+###✏️ Update Note
 PUT /api/notes/:id
 
-json
-Copy code
+###json
+```bash
 {
   "title": "Updated title",
   "content": "Updated content",
   "isPinned": true
 }
-❌ Delete Note
+###❌ Delete Note
 DELETE /api/notes/:id
 
-🌙 Dark / Light Mode
-Implemented using Context API
+###🌙 Dark / Light Mode
+### Implemented using Context API
 
-Theme applied at layout level
+### Theme applied at layout level
 
-Controlled using .dark class on <html>
+### Controlled using .dark class on <html>
 
-Persisted with localStorage
+### Persisted with localStorage
 
-Tailwind CSS v4 enabled using:
+### Tailwind CSS v4 enabled using:
 
-css
-Copy code
+### css
+```bash
 @custom-variant dark (&:where(.dark, .dark *));
 🎯 Key Learnings
 Next.js App Router architecture
@@ -149,10 +148,10 @@ Tailwind CSS v4 theming
 
 UX improvements with confirmations and loading states
 
-👨‍💻 Author
-Love Kumar
-MCA Graduate | Full-Stack Developer
+##👨‍💻 Author
+###Love Kumar
+###MCA Graduate | Full-Stack Developer
 
-🔗 LinkedIn:
+##🔗 LinkedIn:
 https://www.linkedin.com/in/love-kumar-327299212/
 
