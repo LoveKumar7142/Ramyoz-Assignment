@@ -54,7 +54,7 @@ lib/
 └── mongodb.js                # Database connection utility
 models/
 └── Note.js                   # Mongoose Schema
-
+---
 
 ## ⚙️ Installation & Setup
 
