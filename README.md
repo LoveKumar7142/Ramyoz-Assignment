@@ -54,7 +54,7 @@ lib/
 └── mongodb.js                # Database connection utility
 models/
 └── Note.js                   # Mongoose Schema
----
+```
 
 ## ⚙️ Installation & Setup
 
@@ -62,80 +62,86 @@ models/
 ```bash
 git clone https://github.com/your-username/notes-app.git
 cd notes-app
-2️⃣ Install Dependencies
-bash
+```
+### 2️⃣ Install Dependencies
+```bash
 npm install
-3️⃣ Environment Variables
+```
+### 3️⃣ Environment Variables
 Create a .env.local file in the root directory:
 
-env
+### env
 MONGODB_URI=your_mongodb_connection_string
 Make sure MongoDB Atlas network access is enabled.
 
-4️⃣ Run the App
-bash
+### 4️⃣ Run the App
+```bash
 npm run dev
-Open http://localhost:3000 in your browser.
+```
+#### Open http://localhost:3000 in your browser.
 
-🔌 API Endpoints
-➕ Create Note
-POST /api/notes
-
+## 🔌 API Endpoints
+### ➕ Create Note
+#### POST /api/notes
+```bash
 json
 {
   "title": "My Note",
   "content": "Some content here"
 }
-📄 Get All Notes
-GET /api/notes
+```
+### 📄 Get All Notes
+#### GET /api/notes
 
-✏️ Update Note
-PUT /api/notes/:id
-
+### ✏️ Update Note
+#### PUT /api/notes/:id
+```bash
 json
 {
   "title": "Updated title",
   "content": "Updated content",
   "isPinned": true
 }
-❌ Delete Note
-DELETE /api/notes/:id
+```
+## ❌ Delete Note
+### DELETE /api/notes/:id
 
-🌙 Dark / Light Mode
-Implemented using Context API
+## 🌙 Dark / Light Mode
+- Implemented using Context API
 
-Theme applied at layout level
+- Theme applied at layout level
 
-Controlled using .dark class on <html>
+- Controlled using .dark class on <html>
 
-Persisted using localStorage
+- Persisted using localStorage
 
-Tailwind CSS v4 enabled using:
+- Tailwind CSS v4 enabled using:
 
-css
-Copy code
+## css
+```bash
 @custom-variant dark (&:where(.dark, .dark *));
-🎯 Key Learnings
-Next.js App Router architecture
+```
+## 🎯 Key Learnings
+- Next.js App Router architecture
 
-Full-stack CRUD using API routes
+- Full-stack CRUD using API routes
 
-MongoDB integration with Mongoose
+- MongoDB integration with Mongoose
 
-Theme management using Context API
+- Theme management using Context API
 
-Tailwind CSS v4 theming
+- Tailwind CSS v4 theming
 
-UX improvements with confirmations and loading states
+- UX improvements with confirmations and loading states
 
-👨‍💻 Author
-Love Kumar
-MCA Graduate | Full-Stack Developer
+## 👨‍💻 Author
+### Love Kumar
+- MCA Graduate | Full-Stack Developer
 
-🔗 LinkedIn:
-https://www.linkedin.com/in/love-kumar-327299212/
+### 🔗 LinkedIn:
+- https://www.linkedin.com/in/love-kumar-327299212/
 
-⭐ If you like this project, feel free to star the repository!
+## ⭐ If you like this project, feel free to star the repository!
 
 
 ---
